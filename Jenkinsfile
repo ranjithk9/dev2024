@@ -6,6 +6,9 @@ pipeline {
         EMAIL_USER = credentials('email-user')
         EMAIL_PASS = credentials('email-pass')
     }
+    tools {
+        git 'Default' // Make sure this matches the name of the Git installation you configured in Jenkins
+    }
 
     stages {
         stage('Checkout') {
